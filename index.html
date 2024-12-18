@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор процентов</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Калькулятор процентов</h1>
+
+        <!-- Выбор типа процента -->
+        <label for="percentType">Выберите тип процентов:</label>
+        <select id="percentType" onchange="updateForm()">
+            <option value="simple">Простые проценты</option>
+            <option value="compound">Сложные проценты</option>
+        </select>
+
+        <!-- Выбор того, что нужно найти -->
+        <label for="calculateType">Что нужно рассчитать:</label>
+        <select id="calculateType" onchange="updateForm()">
+            <option value="S">Сумма (S)</option>
+            <option value="P">Начальный вклад (P)</option>
+            <option value="i">Процентная ставка (i)</option>
+            <option value="n">Период времени (n)</option>
+        </select>
+
+        <!-- Форма для ввода значений -->
+        <div id="inputForm">
+            <!-- Поля будут обновляться через JavaScript -->
+        </div>
+
+        <!-- Кнопка расчета -->
+        <button id="calculateButton" onclick="calculate()">Рассчитать</button>
+
+        <!-- Отображение результата -->
+        <div id="result">
+            <h2>Результат: <span id="output"></span></h2>
+        </div>
+    </div>
+
+    <script src="./js/app.js"></script>
+</body>
+</html>
